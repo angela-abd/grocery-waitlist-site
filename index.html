@@ -2,46 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Smart Grocery Savings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrocerySmart - Save More, Shop Smarter</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fefefe;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+    nav {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      gap: 2rem;
+      background: #388e3c;
+      padding: 0.5rem 0;
     }
-    .container {
-      background: white;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-      max-width: 500px;
-      width: 90%;
+      max-width: 800px;
+      margin: auto;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+    .hero {
+      background: #e8f5e9;
+      padding: 3rem 2rem;
+      text-align: center;
     }
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
-    input[type="text"], input[type="email"] {
-      width: 100%;
-      padding: 0.75rem;
+    .hero h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
     }
-    button {
-      background: #28a745;
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    form input[type="text"], form input[type="email"] {
+      padding: 0.75rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #4caf50;
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -49,26 +67,67 @@
       font-size: 1rem;
       cursor: pointer;
     }
-    button:hover {
-      background: #218838;
+    form button:hover {
+      background: #388e3c;
     }
     footer {
-      margin-top: 1.5rem;
-      font-size: 0.85rem;
-      color: #888;
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Smarter Grocery Shopping is Coming</h1>
-    <p>Track local deals, compare prices, and save — launching soon in Toronto & the GTA.</p>
+  <header>
+    <h1>GrocerySmart</h1>
+    <p>Your price-comparison app for smarter, cheaper grocery shopping</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#waitlist">Join Waitlist</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Never Overpay for Groceries Again</h1>
+    <p>Compare prices from local stores, scan barcodes in-store, and get real-time flyer updates—all in one app.</p>
+    <a href="#waitlist"><button>Join the Waitlist</button></a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>What is GrocerySmart?</h2>
+    <p>GrocerySmart is an upcoming mobile app that helps you save money every time you shop. Built for busy 20-30-year-olds who want to eat well without breaking the bank. Whether you're meal prepping, budgeting, or just hate wasting time comparing flyers—GrocerySmart has your back.</p>
+  </section>
+
+  <section id="features" class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>🔎 Instantly compare prices from your favorite grocery chains</li>
+      <li>🧾 Scan product barcodes in-store to check for cheaper prices nearby</li>
+      <li>📲 Get real-time flyer deals and price alerts for items you love</li>
+      <li>🛒 Build and track your smart grocery list</li>
+    </ul>
+  </section>
+
+  <section id="waitlist" class="section">
+    <h2>Join the Waitlist</h2>
+    <p>Be the first to get access when we launch in your area. No spam, just savings.</p>
     <form action="https://formspree.io/f/xblyzqdn" method="POST">
       <input type="text" name="name" placeholder="Your name" required />
       <input type="email" name="email" placeholder="Your email" required />
-      <button type="submit">Join the Waitlist</button>
+      <button type="submit">Sign Up</button>
     </form>
-    <footer>No spam. Just smarter shopping.</footer>
-  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GrocerySmart. All rights reserved.</p>
+  </footer>
 </body>
 </html>
